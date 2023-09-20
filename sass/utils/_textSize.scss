@@ -1,6 +1,48 @@
-$headingXL: 64px;
-$headingL: 48px;
-$headingM: 24px;
-$headingS: 20px;
-$bodyM: 16px;
-$bodyS: 14px;
+%headingXL {
+  font-size: 64px;
+  font-family: $mainFont;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+%headingL {
+  font-size: 48px;
+  font-family: $mainFont;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+%headingM {
+  font-size: 24px;
+  font-family: $mainFont;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+%headingS {
+  font-size: 24px;
+  font-family: $mainFont;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+%bodyM {
+  font-size: 16px;
+  font-family: $mainFont;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+%bodyMBold {
+  font-size: 16px;
+  font-family: $mainFont;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+%bodyS {
+  font-size: 14px;
+  font-family: $mainFont;
+  font-weight: 400;
+  line-height: 150%;
+}

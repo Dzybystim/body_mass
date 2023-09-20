@@ -1,4 +1,123 @@
-body {
+@font-face {
+  font-family: "Inter";
+  src: url("../../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format(truetype);
+  font-weight: 100 900;
+}
+.hero_header {
+  font-size: 48px;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.calculator_header {
+  font-size: 24px;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.hero_text {
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text,
+.calculator_custom-radio [type=radio]:not(:checked) + .calculator_custom-radio-text {
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.hero {
   background-image: linear-gradient(to bottom right, rgba(214, 252, 254, 0), #d6e6fe);
-  font-size: 30px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+.hero_icon {
+  display: block;
+  width: 40px;
+}
+.hero_icon--center {
+  padding-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero_header {
+  color: #253347;
+  text-align: center;
+  margin: 0;
+}
+.hero_header--indent {
+  margin-top: 24px;
+}
+.hero_text {
+  color: #5e6e85;
+  text-align: center;
+  margin: 0;
+}
+.hero_text--indent {
+  margin-top: 24px;
+}
+
+.calculator {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+.calculator_header {
+  color: #253347;
+  margin: 0;
+  letter-spacing: -0.05em;
+}
+.calculator_calculation-system {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator_calculation-system--indent {
+  margin-top: 24px;
+}
+
+.calculator_custom-radio [type=radio]:checked,
+.calculator_custom-radio [type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+.calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text,
+.calculator_custom-radio [type=radio]:not(:checked) + .calculator_custom-radio-text {
+  color: #253347;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.calculator_custom-radio [type=radio] + .calculator_custom-radio-text:before {
+  content: "";
+  vertical-align: top;
+  position: relative;
+  top: -0.2em;
+  margin-right: 1.125em;
+  width: 31px;
+  height: 31px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  border: 1px #d8e2e7 solid;
+  display: inline-block;
+}
+
+.calculator_custom-radio [type=radio]:hover + .calculator_custom-radio-text:before {
+  border: 1px #345ff6 solid;
+}
+
+.calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text:before {
+  border: 8px #d8e2e7 solid;
+  background-color: #345ff6;
 }/*# sourceMappingURL=main.css.map */

@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./assets/images/icon-browser.svg"
     />
     <link
       rel="stylesheet"
@@ -19,12 +19,54 @@
     <title>Body Mass Index Calculator</title>
   </head>
   <body>
-    Body Mass Index Calculator Better understand your weight in relation to your
-    height using our body mass index (BM) calculator. While BMI is not the sole
-    determinant of a healthy weight, it offers a valuable starting point to
-    evaluate your overall health and well-being. Enter your details below Metric
-    Imperial Height Weight Your BMI is...
-
+    <header>
+      <div class="hero container">
+        <img
+          class="hero_icon hero_icon--center"
+          src="./assets/images/logo.svg"
+          alt="logo"
+        />
+        <h1 class="hero_header hero_header--indent">
+          Body Mass Index Calculator
+        </h1>
+        <p class="hero_text hero_text--indent">
+          Better understand your weight in relation to your height using our
+          body mass index (BM) calculator. While BMI is not the sole determinant
+          of a healthy weight, it offers a valuable starting point to evaluate
+          your overall health and well-being.
+        </p>
+        <div class="calculator">
+          <form>
+            <h2 class="calculator_header">Enter your details below</h2>
+            <div
+              class="calculator_calculation-system calculator_calculation-system--indent"
+            >
+              <div class="calculator_custom-radio">
+                <label>
+                  <input type="radio" name="details" value="metric" checked />
+                  <span class="calculator_custom-radio-text">Metric</span>
+                </label>
+              </div>
+              <div class="calculator_custom-radio">
+                <label>
+                  <input type="radio" name="details" value="imperial" />
+                  <span class="calculator_custom-radio-text">Imperial</span>
+                </label>
+              </div>
+            </div>
+            <label>
+              Height
+              <input type="text" name="height" />
+            </label>
+            <label>
+              Weight
+              <input type="text" name="weight" />
+            </label>
+          </form>
+        </div>
+      </div>
+    </header>
+    Height Weight Your BMI is...
     <!-- add score -->
 
     Your BMI suggests you're
