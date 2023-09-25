@@ -36,7 +36,7 @@
           your overall health and well-being.
         </p>
         <div class="calculator">
-          <form>
+          <form class="calculator_form--indent">
             <h2 class="calculator_header">Enter your details below</h2>
             <div
               class="calculator_calculation-system calculator_calculation-system--indent"
@@ -55,18 +55,44 @@
               </div>
             </div>
             <label>
-              Height
-              <input type="text" name="height" />
+              <h3
+                class="calculator_parameters-header calculator_parameters-header--indent"
+              >
+                Height
+              </h3>
+              <div class="calculator_box-input">
+                <input
+                  type="text"
+                  name="height"
+                  class="calculator_input calculator_input--indent"
+                />
+                <span class="calculator_units">cm</span>
+              </div>
             </label>
             <label>
-              Weight
-              <input type="text" name="weight" />
+              <h3
+                class="calculator_parameters-header calculator_parameters-header--indent"
+              >
+                Weight
+              </h3>
+              <div class="calculator_box-input">
+                <input type="text" name="weight" class="calculator_input" />
+                <span class="calculator_units">kg</span>
+              </div>
             </label>
           </form>
+          <div class="calculator_text-box">
+            <h3 class="calculator_text-box-header">Your BMI is...</h3>
+            <span class="calculator_text-box-grade">23.4</span>
+            <p class="calculator_text-box-text">
+              Your BMI suggests you're a healthy weight. You ideal weight is
+              between
+              <span class="calculator_bolt-text">63.3kgs - 85.2kgs</span>.
+            </p>
+          </div>
         </div>
       </div>
     </header>
-    Height Weight Your BMI is...
     <!-- add score -->
 
     Your BMI suggests you're

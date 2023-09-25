@@ -3,14 +3,14 @@
   src: url("../../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format(truetype);
   font-weight: 100 900;
 }
-.hero_header {
+.calculator_text-box-grade, .hero_header {
   font-size: 48px;
   font-family: "Inter";
   font-weight: 600;
   line-height: 110%;
 }
 
-.calculator_header {
+.calculator_units, .calculator_input, .calculator_header {
   font-size: 24px;
   font-family: "Inter";
   font-weight: 600;
@@ -24,11 +24,18 @@
   line-height: 150%;
 }
 
-.calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text,
-.calculator_custom-radio [type=radio]:not(:checked) + .calculator_custom-radio-text {
+.calculator_text-box-header, .calculator .calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text,
+.calculator .calculator_custom-radio [type=radio]:not(:checked) + .calculator_custom-radio-text {
   font-size: 16px;
   font-family: "Inter";
   font-weight: 600;
+  line-height: 150%;
+}
+
+.calculator_text-box-text, .calculator_parameters-header {
+  font-size: 14px;
+  font-family: "Inter";
+  font-weight: 400;
   line-height: 150%;
 }
 
@@ -41,6 +48,8 @@
   background-image: linear-gradient(to bottom right, rgba(214, 252, 254, 0), #d6e6fe);
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
+  position: relative;
+  height: 640px;
 }
 .hero_icon {
   display: block;
@@ -72,6 +81,11 @@
   padding: 24px;
   background-color: #ffffff;
   border-radius: 16px;
+  position: absolute;
+  margin-top: 48px;
+  left: 24px;
+  right: 24px;
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.1450980392);
 }
 .calculator_header {
   color: #253347;
@@ -84,22 +98,20 @@
 }
 .calculator_calculation-system--indent {
   margin-top: 24px;
+  margin-bottom: 24px;
 }
-
-.calculator_custom-radio [type=radio]:checked,
-.calculator_custom-radio [type=radio]:not(:checked) {
+.calculator .calculator_custom-radio [type=radio]:checked,
+.calculator .calculator_custom-radio [type=radio]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
-
-.calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text,
-.calculator_custom-radio [type=radio]:not(:checked) + .calculator_custom-radio-text {
+.calculator .calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text,
+.calculator .calculator_custom-radio [type=radio]:not(:checked) + .calculator_custom-radio-text {
   color: #253347;
   cursor: pointer;
   display: inline-block;
 }
-
-.calculator_custom-radio [type=radio] + .calculator_custom-radio-text:before {
+.calculator .calculator_custom-radio [type=radio] + .calculator_custom-radio-text:before {
   content: "";
   vertical-align: top;
   position: relative;
@@ -112,12 +124,77 @@
   border: 1px #d8e2e7 solid;
   display: inline-block;
 }
-
-.calculator_custom-radio [type=radio]:hover + .calculator_custom-radio-text:before {
+.calculator .calculator_custom-radio [type=radio]:hover + .calculator_custom-radio-text:before {
   border: 1px #345ff6 solid;
 }
-
-.calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text:before {
+.calculator .calculator_custom-radio [type=radio]:checked + .calculator_custom-radio-text:before {
   border: 8px #d8e2e7 solid;
   background-color: #345ff6;
+}
+
+.calculator_parameters-header {
+  color: #5e6e85;
+  margin: 0;
+}
+
+.calculator_parameters-header--indent {
+  margin-bottom: 8px;
+}
+
+.calculator_box-input {
+  position: relative;
+}
+
+.calculator_input {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 3em;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px #d8e2e7 solid;
+  outline: none;
+  color: #253347;
+  letter-spacing: -0.05em;
+}
+
+.calculator_input--indent {
+  margin-bottom: 16px;
+}
+
+.calculator_units {
+  color: #345ff6;
+  position: absolute;
+  right: 1em;
+  top: 0.84em;
+}
+
+.calculator_form--indent {
+  margin-bottom: 24px;
+}
+
+.calculator_text-box {
+  width: 100%;
+  border-radius: 16px;
+  padding: 32px;
+  background-image: linear-gradient(to right, #345ff6, #587dff);
+}
+
+.calculator_text-box-header {
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.calculator_text-box-grade {
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.calculator_text-box-text {
+  color: #ffffff;
+}
+
+.calculator_bolt-text {
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
