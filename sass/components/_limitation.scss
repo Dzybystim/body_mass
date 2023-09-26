@@ -1,0 +1,58 @@
+.limitation--indent {
+  margin-left: 19px;
+  margin-right: 29px;
+  margin-bottom: 96px;
+}
+
+.limitation_headHeader {
+  @extend %headingLM;
+  color: $header-text;
+  text-align: center;
+
+  letter-spacing: -0.05em;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.limitation_headText {
+  @extend %bodyM;
+  color: $text-color;
+
+  text-align: center;
+  margin: 0;
+}
+
+.limitation_headBox {
+  margin-bottom: 56px;
+}
+
+.limitation_box {
+  background-color: #ffffff;
+  box-shadow: 16px 32px 56px #8faecf25;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: 24px;
+}
+
+.limitation_box:last-child {
+  margin-bottom: 0;
+}
+
+.limitation_boxImage {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 16px;
+}
+
+.limitation_header {
+  @extend %headingS;
+  margin: 0;
+}
+
+.limitation_text {
+  @extend %bodyM;
+  color: $text-color;
+  margin: 0;
+}

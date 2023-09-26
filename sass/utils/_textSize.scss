@@ -12,6 +12,13 @@
   line-height: 110%;
 }
 
+%headingLM {
+  font-size: 32px;
+  font-family: $mainFont;
+  font-weight: 600;
+  line-height: 110%;
+}
+
 %headingM {
   font-size: 24px;
   font-family: $mainFont;
@@ -20,7 +27,7 @@
 }
 
 %headingS {
-  font-size: 24px;
+  font-size: 20px;
   font-family: $mainFont;
   font-weight: 600;
   line-height: 110%;

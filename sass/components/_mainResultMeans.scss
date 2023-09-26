@@ -1,0 +1,33 @@
+.resultMeans {
+  margin-top: 542px;
+}
+
+.resultMeans_thumb {
+  width: 375px;
+}
+
+.resultMeans_image {
+  display: block;
+  width: 100%;
+}
+
+.resultMeans_container {
+  margin-top: 48px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 72px;
+}
+
+.resultMeans_header {
+  @extend %headingLM;
+  letter-spacing: -0.05em;
+  margin: 0;
+  margin-bottom: 32px;
+
+  color: $header-text;
+}
+
+.resultMeans-text {
+  @extend %bodyM;
+  color: $text-color;
+}

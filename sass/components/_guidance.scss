@@ -1,0 +1,35 @@
+.guidance {
+  margin-bottom: 72px;
+  background-image: $brand-gradient;
+
+  padding-left: 19px;
+  padding-right: 29px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.guidance_box {
+  margin-bottom: 40px;
+}
+
+.guidance_box:last-child {
+  margin-bottom: 0;
+}
+
+.guidance_image {
+  margin-bottom: 32px;
+}
+
+.guidance_header {
+  @extend %headingM;
+  color: $header-text;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.guidance_text {
+  @extend %bodyM;
+  color: $text-color;
+
+  margin: 0;
+}

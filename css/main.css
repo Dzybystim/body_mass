@@ -10,14 +10,28 @@
   line-height: 110%;
 }
 
-.calculator_units, .calculator_input, .calculator_header {
+.limitation_headHeader, .resultMeans_header {
+  font-size: 32px;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.guidance_header, .calculator_units, .calculator_input, .calculator_header {
   font-size: 24px;
   font-family: "Inter";
   font-weight: 600;
   line-height: 110%;
 }
 
-.hero_text {
+.limitation_header {
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.limitation_text, .limitation_headText, .guidance_text, .resultMeans-text, .hero_text {
   font-size: 16px;
   font-family: "Inter";
   font-weight: 400;
@@ -197,4 +211,119 @@
 
 .calculator_bolt-text {
   font-weight: bold;
+}
+
+.resultMeans {
+  margin-top: 542px;
+}
+
+.resultMeans_thumb {
+  width: 375px;
+}
+
+.resultMeans_image {
+  display: block;
+  width: 100%;
+}
+
+.resultMeans_container {
+  margin-top: 48px;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 72px;
+}
+
+.resultMeans_header {
+  letter-spacing: -0.05em;
+  margin: 0;
+  margin-bottom: 32px;
+  color: #253347;
+}
+
+.resultMeans-text {
+  color: #5e6e85;
+}
+
+.guidance {
+  margin-bottom: 72px;
+  background-image: linear-gradient(to bottom right, rgba(214, 252, 254, 0), #d6e6fe);
+  padding-left: 19px;
+  padding-right: 29px;
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.guidance_box {
+  margin-bottom: 40px;
+}
+
+.guidance_box:last-child {
+  margin-bottom: 0;
+}
+
+.guidance_image {
+  margin-bottom: 32px;
+}
+
+.guidance_header {
+  color: #253347;
+  margin: 0;
+  margin-bottom: 24px;
+}
+
+.guidance_text {
+  color: #5e6e85;
+  margin: 0;
+}
+
+.limitation--indent {
+  margin-left: 19px;
+  margin-right: 29px;
+  margin-bottom: 96px;
+}
+
+.limitation_headHeader {
+  color: #253347;
+  text-align: center;
+  letter-spacing: -0.05em;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.limitation_headText {
+  color: #5e6e85;
+  text-align: center;
+  margin: 0;
+}
+
+.limitation_headBox {
+  margin-bottom: 56px;
+}
+
+.limitation_box {
+  background-color: #ffffff;
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.1450980392);
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: 24px;
+}
+
+.limitation_box:last-child {
+  margin-bottom: 0;
+}
+
+.limitation_boxImage {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.limitation_header {
+  margin: 0;
+}
+
+.limitation_text {
+  color: #5e6e85;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */
