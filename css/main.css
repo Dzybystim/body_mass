@@ -46,7 +46,7 @@
   line-height: 150%;
 }
 
-.calculator_text-box-text, .calculator_parameters-header {
+.calculator_warning, .calculator_text-box-text, .calculator_parameters-header {
   font-size: 14px;
   font-family: "Inter";
   font-weight: 400;
@@ -172,6 +172,18 @@
   letter-spacing: -0.05em;
 }
 
+.calculator_input:invalid {
+  border: 1px red solid;
+}
+
+.calculator_input:hover {
+  border: 1px #345ff6 solid;
+}
+
+.calculator_inputImperial {
+  padding-right: 2.6em;
+}
+
 .calculator_input--indent {
   margin-bottom: 16px;
 }
@@ -211,6 +223,19 @@
 
 .calculator_bolt-text {
   font-weight: bold;
+}
+
+.calculator_param--indent {
+  margin-bottom: 24px;
+}
+
+.calculator_box-imperial {
+  display: flex;
+  gap: 16px;
+}
+
+.calculator_warning {
+  color: red;
 }
 
 .resultMeans {

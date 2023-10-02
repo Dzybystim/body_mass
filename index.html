@@ -36,24 +36,37 @@
           your overall health and well-being.
         </p>
         <div class="calculator">
-          <form class="calculator_form--indent">
+          <form class="calculator_form--indent calculator_form_js">
             <h2 class="calculator_header">Enter your details below</h2>
             <div
               class="calculator_calculation-system calculator_calculation-system--indent"
             >
               <div class="calculator_custom-radio">
                 <label>
-                  <input type="radio" name="details" value="metric" checked />
+                  <input
+                    class="metric_js"
+                    type="radio"
+                    name="details"
+                    value="metric"
+                    checked
+                  />
                   <span class="calculator_custom-radio-text">Metric</span>
                 </label>
               </div>
               <div class="calculator_custom-radio">
                 <label>
-                  <input type="radio" name="details" value="imperial" />
+                  <input
+                    class="imperial_js"
+                    type="radio"
+                    name="details"
+                    value="imperial"
+                  />
                   <span class="calculator_custom-radio-text">Imperial</span>
                 </label>
               </div>
             </div>
+          </form>
+          <form class="calculator_param_js calculator_param--indent">
             <label>
               <h3
                 class="calculator_parameters-header calculator_parameters-header--indent"
@@ -65,6 +78,10 @@
                   type="text"
                   name="height"
                   class="calculator_input calculator_input--indent"
+                  pattern="[0-9]+"
+                  title="You can only enter numbers"
+                  minlength="1"
+                  maxlength="3"
                 />
                 <span class="calculator_units">cm</span>
               </div>
@@ -76,16 +93,26 @@
                 Weight
               </h3>
               <div class="calculator_box-input">
-                <input type="text" name="weight" class="calculator_input" />
+                <input
+                  type="text"
+                  name="weight"
+                  class="calculator_input"
+                  pattern="[0-9]+"
+                  title="You can only enter numbers"
+                  minlength="1"
+                  maxlength="3"
+                />
                 <span class="calculator_units">kg</span>
               </div>
             </label>
           </form>
+
           <div class="calculator_text-box">
             <h3 class="calculator_text-box-header">Your BMI is...</h3>
             <span class="calculator_text-box-grade">23.4</span>
             <p class="calculator_text-box-text">
-              Your BMI suggests you're a healthy weight. You ideal weight is
+              Your BMI suggests you're a
+              <span class="result_js">healthy weight</span>. You ideal weight is
               between
               <span class="calculator_bolt-text">63.3kgs - 85.2kgs</span>.
             </p>
@@ -222,5 +249,6 @@
         </div>
       </div>
     </main>
+    <script src="./js/index.js"></script>
   </body>
 </html>

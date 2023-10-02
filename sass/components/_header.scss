@@ -150,6 +150,18 @@
   letter-spacing: -0.05em;
 }
 
+.calculator_input:invalid {
+  border: 1px red solid;
+}
+
+.calculator_input:hover {
+  border: 1px $second-brand-color solid;
+}
+
+.calculator_inputImperial {
+  padding-right: 2.6em;
+}
+
 .calculator_input--indent {
   margin-bottom: 16px;
 }
@@ -195,4 +207,18 @@
 
 .calculator_bolt-text {
   font-weight: bold;
+}
+
+.calculator_param--indent {
+  margin-bottom: 24px;
+}
+
+.calculator_box-imperial {
+  display: flex;
+  gap: 16px;
+}
+
+.calculator_warning {
+  @extend %bodyS;
+  color: red;
 }
