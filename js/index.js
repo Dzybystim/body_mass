@@ -1,9 +1,7 @@
 const formElement = document.querySelector(".calculator_form_js");
 const paramFormElement = document.querySelector(".calculator_param_js");
-const numberBMI = document.querySelector(".calculator_text-box-grade");
-const resultTextElenent = document.querySelector(".result_js");
-const recomWeightElement = document.querySelector(".calculator_bolt-text");
 const meaningWeightTextElem = document.querySelector(".resultMeans-text");
+const superBoxElem = document.querySelector(".calculator_super-box");
 
 function resultText(BMI) {
   let result;
@@ -34,10 +32,10 @@ function resultText(BMI) {
     text = "A BMI above 40 is considered “class III obesity.” Vam Gaiki";
   }
 
-  resultTextElenent.innerHTML = `${result}`;
+  // resultTextElenent.innerHTML = `${result}`;
   meaningWeightTextElem.innerHTML = `${text}`;
 
-  return;
+  return result;
 }
 
 function recommendedWeight(height) {
@@ -45,9 +43,7 @@ function recommendedWeight(height) {
   const lowThreshold = squareHeight * 18.5;
   const highThreshold = squareHeight * 25;
 
-  recomWeightElement.innerHTML = `${lowThreshold.toFixed(
-    1
-  )}kgs - ${highThreshold.toFixed(1)}kgs`;
+  return `${lowThreshold.toFixed(1)}kgs - ${highThreshold.toFixed(1)}kgs`;
 }
 
 function recommendedWeightImperial(height) {
@@ -55,7 +51,7 @@ function recommendedWeightImperial(height) {
   const lowThreshold = squareHeight * (18.5 / 703);
   const highThreshold = squareHeight * (25 / 703);
 
-  recomWeightElement.innerHTML = `${(lowThreshold / 14).toFixed(0)}st 
+  return `${(lowThreshold / 14).toFixed(0)}st 
   ${(lowThreshold % 14).toFixed(0)}lbs - ${(highThreshold / 14).toFixed(0)}st
   ${(highThreshold % 14).toFixed(0)}lbs`;
 }
@@ -75,10 +71,23 @@ function handleSubmit(event) {
       const metricBMI = weight / (heightMetr * heightMetr);
       const metricBMIround = metricBMI.toFixed(1);
 
-      resultText(metricBMIround);
-      recommendedWeight(heightMetr);
+      const result = resultText(metricBMIround);
+      const recommended = recommendedWeight(heightMetr);
 
-      numberBMI.innerHTML = `${metricBMIround}`;
+      superBoxElem.innerHTML = `
+      <div class="calculator_text-box">
+              <div class="calculator_result-header">
+                <h3 class="calculator_text-box-header">Your BMI is...</h3>
+                <span class="calculator_text-box-grade">${metricBMIround}</span>
+              </div>
+              <p class="calculator_text-box-text">
+                Your BMI suggests you're a
+                <span class="result_js">${result}</span>. You ideal weight
+                is between
+                <span class="calculator_bolt-text">${recommended}</span>.
+              </p>
+      </div>
+      `;
       return;
     }
     return;
@@ -109,10 +118,23 @@ function handleSubmit(event) {
         (weightImperial / (heightImperial * heightImperial)) * 703;
       const imperialBMIround = imperialBMI.toFixed(1);
 
-      resultText(imperialBMIround);
-      recommendedWeightImperial(heightImperial);
+      const result = resultText(imperialBMIround);
+      const recommended = recommendedWeightImperial(heightImperial);
 
-      numberBMI.innerHTML = `${imperialBMIround}`;
+      superBoxElem.innerHTML = `
+      <div class="calculator_text-box">
+              <div class="calculator_result-header">
+                <h3 class="calculator_text-box-header">Your BMI is...</h3>
+                <span class="calculator_text-box-grade">${imperialBMIround}</span>
+              </div>
+              <p class="calculator_text-box-text">
+                Your BMI suggests you're a
+                <span class="result_js">${result}</span>. You ideal weight
+                is between
+                <span class="calculator_bolt-text">${recommended}</span>.
+              </p>
+      </div>
+      `;
       return;
     }
     return;
@@ -122,7 +144,9 @@ function handleSubmit(event) {
 function addSystem(event) {
   const elem = event.target.value;
   if (elem === "metric") {
-    paramFormElement.innerHTML = `<label>
+    paramFormElement.innerHTML = `
+    <div class="calculator_param">
+    <label>
     <h3
       class="calculator_parameters-header calculator_parameters-header--indent"
     >
@@ -159,7 +183,8 @@ function addSystem(event) {
       />
       <span class="calculator_units">kg</span>
     </div>
-  </label>`;
+  </label>
+  </div>`;
   } else if (elem === "imperial") {
     paramFormElement.innerHTML = `
     <label>
@@ -168,7 +193,7 @@ function addSystem(event) {
               >
                 Height
               </h3>
-              <div class="calculator_box-imperial">
+              <div class="calculator_box-imperial calculator_box-imperial--indent">
                 <div class="calculator_box-input">
                   <input
                     type="text"

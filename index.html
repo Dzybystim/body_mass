@@ -67,55 +67,54 @@
             </div>
           </form>
           <form class="calculator_param_js calculator_param--indent">
-            <label>
-              <h3
-                class="calculator_parameters-header calculator_parameters-header--indent"
-              >
-                Height
-              </h3>
-              <div class="calculator_box-input">
-                <input
-                  type="text"
-                  name="height"
-                  class="calculator_input calculator_input--indent"
-                  pattern="[0-9]+"
-                  title="You can only enter numbers"
-                  minlength="1"
-                  maxlength="3"
-                />
-                <span class="calculator_units">cm</span>
-              </div>
-            </label>
-            <label>
-              <h3
-                class="calculator_parameters-header calculator_parameters-header--indent"
-              >
-                Weight
-              </h3>
-              <div class="calculator_box-input">
-                <input
-                  type="text"
-                  name="weight"
-                  class="calculator_input"
-                  pattern="[0-9]+"
-                  title="You can only enter numbers"
-                  minlength="1"
-                  maxlength="3"
-                />
-                <span class="calculator_units">kg</span>
-              </div>
-            </label>
+            <div class="calculator_param">
+              <label>
+                <h3
+                  class="calculator_parameters-header calculator_parameters-header--indent"
+                >
+                  Height
+                </h3>
+                <div class="calculator_box-input">
+                  <input
+                    type="text"
+                    name="height"
+                    class="calculator_input calculator_input--indent"
+                    pattern="[0-9]+"
+                    title="You can only enter numbers"
+                    minlength="1"
+                    maxlength="3"
+                  />
+                  <span class="calculator_units">cm</span>
+                </div>
+              </label>
+              <label>
+                <h3
+                  class="calculator_parameters-header calculator_parameters-header--indent"
+                >
+                  Weight
+                </h3>
+                <div class="calculator_box-input">
+                  <input
+                    type="text"
+                    name="weight"
+                    class="calculator_input"
+                    pattern="[0-9]+"
+                    title="You can only enter numbers"
+                    minlength="1"
+                    maxlength="3"
+                  />
+                  <span class="calculator_units">kg</span>
+                </div>
+              </label>
+            </div>
           </form>
-
-          <div class="calculator_text-box">
-            <h3 class="calculator_text-box-header">Your BMI is...</h3>
-            <span class="calculator_text-box-grade">23.4</span>
-            <p class="calculator_text-box-text">
-              Your BMI suggests you're a
-              <span class="result_js">healthy weight</span>. You ideal weight is
-              between
-              <span class="calculator_bolt-text">63.3kgs - 85.2kgs</span>.
-            </p>
+          <div class="calculator_super-box">
+            <div class="calculator_welcome-box">
+              <h3 class="calculator_welcome-header">Welcome!</h3>
+              <p class="calculator_text-box-text">
+                Enter your height and weight and you'll see your BMI result here
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -141,37 +140,54 @@
             week.
           </p>
         </div>
+        <img
+          alt="line"
+          src="./assets/images/pattern-curved-line-left.svg"
+          class="result_line"
+        />
       </div>
       <div class="guidance">
         <div class="guidance_box">
-          <svg class="guidance_image" width="64" height="64">
-            <use href="./assets/images/sprite.svg#icon-eating"></use>
-          </svg>
-          <h3 class="guidance_header">Healthy eating</h3>
-          <p class="guidance_text">
-            Healthy eating promotes weight control, disease prevention, better
-            digestion, immunity, mental clarity, and mood.
-          </p>
+          <div>
+            <svg class="guidance_image" width="64" height="64">
+              <use href="./assets/images/sprite.svg#icon-eating"></use>
+            </svg>
+          </div>
+          <div>
+            <h3 class="guidance_header">Healthy eating</h3>
+            <p class="guidance_text">
+              Healthy eating promotes weight control, disease prevention, better
+              digestion, immunity, mental clarity, and mood.
+            </p>
+          </div>
         </div>
         <div class="guidance_box">
-          <svg class="guidance_image" width="64" height="64">
-            <use href="./assets/images/sprite.svg#icon-exercise"></use>
-          </svg>
-          <h3 class="guidance_header">Regular exercise</h3>
-          <p class="guidance_text">
-            Exercise improves fitness, aids weight control, elevates mood, and
-            reduces disease risk, fostering wellness and longevity.
-          </p>
+          <div>
+            <svg class="guidance_image" width="64" height="64">
+              <use href="./assets/images/sprite.svg#icon-exercise"></use>
+            </svg>
+          </div>
+          <div>
+            <h3 class="guidance_header">Regular exercise</h3>
+            <p class="guidance_text">
+              Exercise improves fitness, aids weight control, elevates mood, and
+              reduces disease risk, fostering wellness and longevity.
+            </p>
+          </div>
         </div>
         <div class="guidance_box">
-          <svg class="guidance_image" width="64" height="64">
-            <use href="./assets/images/sprite.svg#icon-sleep"></use>
-          </svg>
-          <h3 class="guidance_header">Adequate sleep</h3>
-          <p class="guidance_text">
-            Sleep enhances mental clarity, emotional stability, and physical
-            wellness, promoting overall restoration and rejuvenation.
-          </p>
+          <div>
+            <svg class="guidance_image" width="64" height="64">
+              <use href="./assets/images/sprite.svg#icon-sleep"></use>
+            </svg>
+          </div>
+          <div>
+            <h3 class="guidance_header">Adequate sleep</h3>
+            <p class="guidance_text">
+              Sleep enhances mental clarity, emotional stability, and physical
+              wellness, promoting overall restoration and rejuvenation.
+            </p>
+          </div>
         </div>
       </div>
       <div class="limitation limitation--indent">
@@ -184,69 +200,76 @@
             may not be beneficial to use.
           </p>
         </div>
-        <div class="limitation_box">
-          <div class="limitation_boxImage">
-            <svg class="limitation_image" width="32" height="32">
-              <use href="./assets/images/sprite.svg#icon-gender"></use>
-            </svg>
-            <h3 class="limitation_header">Gender</h3>
+        <div class="limitation_grid">
+          <div class="limitation_box">
+            <div class="limitation_boxImage">
+              <svg class="limitation_image" width="32" height="32">
+                <use href="./assets/images/sprite.svg#icon-gender"></use>
+              </svg>
+              <h3 class="limitation_header">Gender</h3>
+            </div>
+            <p class="limitation_text">
+              The development and body fat composition of girls and boys vary
+              with age. Consequently, a child's age and gender are considered
+              when evaluating their BMI.
+            </p>
           </div>
-          <p class="limitation_text">
-            The development and body fat composition of girls and boys vary with
-            age. Consequently, a child's age and gender are considered when
-            evaluating their BMI.
-          </p>
-        </div>
-        <div class="limitation_box">
-          <div class="limitation_boxImage">
-            <svg class="limitation_image" width="32" height="32">
-              <use href="./assets/images/sprite.svg#icon-age"></use>
-            </svg>
-            <h3 class="limitation_header">Age</h3>
+          <div class="limitation_box">
+            <div class="limitation_boxImage">
+              <svg class="limitation_image" width="32" height="32">
+                <use href="./assets/images/sprite.svg#icon-age"></use>
+              </svg>
+              <h3 class="limitation_header">Age</h3>
+            </div>
+            <p class="limitation_text">
+              In aging individuals, increased body fat and muscle loss may cause
+              BMI to underestimate body fat content.
+            </p>
           </div>
-          <p class="limitation_text">
-            In aging individuals, increased body fat and muscle loss may cause
-            BMI to underestimate body fat content.
-          </p>
-        </div>
-        <div class="limitation_box">
-          <div class="limitation_boxImage">
-            <svg class="limitation_image" width="32" height="32">
-              <use href="./assets/images/sprite.svg#icon-muscle"></use>
-            </svg>
-            <h3 class="limitation_header">Muscle</h3>
+          <div class="limitation_box">
+            <div class="limitation_boxImage">
+              <svg class="limitation_image" width="32" height="32">
+                <use href="./assets/images/sprite.svg#icon-muscle"></use>
+              </svg>
+              <h3 class="limitation_header">Muscle</h3>
+            </div>
+            <p class="limitation_text">
+              BMI may misclassify muscular individuals as overweight or obese,
+              as it doesn't differentiate muscle from fat.
+            </p>
           </div>
-          <p class="limitation_text">
-            BMI may misclassify muscular individuals as overweight or obese, as
-            it doesn't differentiate muscle from fat.
-          </p>
-        </div>
-        <div class="limitation_box">
-          <div class="limitation_boxImage">
-            <svg class="limitation_image" width="32" height="32">
-              <use href="./assets/images/sprite.svg#icon-pregnancy"></use>
-            </svg>
-            <h3 class="limitation_header">Pregnancy</h3>
+          <div class="limitation_box">
+            <div class="limitation_boxImage">
+              <svg class="limitation_image" width="32" height="32">
+                <use href="./assets/images/sprite.svg#icon-pregnancy"></use>
+              </svg>
+              <h3 class="limitation_header">Pregnancy</h3>
+            </div>
+            <p class="limitation_text">
+              Expectant mothers experience weight gain due to their growing
+              baby. Maintaining a healthy pre-pregnancy BMI is advisable to
+              minimise health risks for both mother and child.
+            </p>
           </div>
-          <p class="limitation_text">
-            Expectant mothers experience weight gain due to their growing baby.
-            Maintaining a healthy pre-pregnancy BMI is advisable to minimise
-            health risks for both mother and child.
-          </p>
-        </div>
-        <div class="limitation_box">
-          <div class="limitation_boxImage">
-            <svg class="limitation_image" width="32" height="32">
-              <use href="./assets/images/sprite.svg#icon-race"></use>
-            </svg>
-            <h3 class="limitation_header">Race</h3>
+          <div class="limitation_box">
+            <div class="limitation_boxImage">
+              <svg class="limitation_image" width="32" height="32">
+                <use href="./assets/images/sprite.svg#icon-race"></use>
+              </svg>
+              <h3 class="limitation_header">Race</h3>
+            </div>
+            <p class="limitation_text">
+              Certain health concerns may affect individuals of some Black and
+              Asian origins at lower BMIs than others. To learn more, it is
+              advised to discuss this with your GP or practice nurse.
+            </p>
           </div>
-          <p class="limitation_text">
-            Certain health concerns may affect individuals of some Black and
-            Asian origins at lower BMIs than others. To learn more, it is
-            advised to discuss this with your GP or practice nurse.
-          </p>
         </div>
+        <img
+          alt="line"
+          src="./assets/images/pattern-curved-line-right.svg"
+          class="limitation_line"
+        />
       </div>
     </main>
     <script src="./js/index.js"></script>

@@ -56,3 +56,87 @@
   color: $text-color;
   margin: 0;
 }
+
+.limitation_line {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .limitation--indent {
+    margin-left: 39px;
+    margin-right: 43px;
+    margin-bottom: 96px;
+  }
+
+  .limitation_grid {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 15px;
+    justify-content: center;
+  }
+
+  .limitation_box {
+    flex-basis: calc((100% - 15px) / 2);
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .limitation {
+    position: relative;
+  }
+
+  .limitation_headBox {
+    position: absolute;
+    width: 564px;
+    margin: 0;
+  }
+
+  .limitation_headHeader {
+    font-size: 48px;
+    margin-bottom: 35px;
+    text-align: left;
+  }
+
+  .limitation_headText {
+    text-align: left;
+  }
+
+  .limitation--indent {
+    margin-left: 140px;
+    margin-right: 140px;
+    margin-bottom: 120px;
+  }
+
+  .limitation_grid {
+    justify-content: flex-end;
+    column-gap: 32px;
+  }
+
+  .limitation_box {
+    flex-basis: 365px;
+  }
+
+  .limitation_box:first-child {
+    margin-left: 600px;
+    margin-right: 99px;
+    margin-bottom: 6px;
+  }
+
+  .limitation_box:nth-child(2) {
+    margin-left: 200px;
+  }
+
+  .limitation_box:last-child {
+    margin-right: 299px;
+  }
+
+  .limitation_line {
+    display: block;
+    position: absolute;
+
+    top: 251px;
+    left: 165px;
+  }
+}

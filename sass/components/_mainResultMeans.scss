@@ -4,6 +4,8 @@
 
 .resultMeans_thumb {
   width: 375px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .resultMeans_image {
@@ -30,4 +32,74 @@
 .resultMeans-text {
   @extend %bodyM;
   color: $text-color;
+  margin: 0;
+}
+
+.result_line {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .resultMeans {
+    margin-top: 277px;
+    display: flex;
+    align-items: center;
+    margin-left: -116px;
+    margin-right: 43px;
+    gap: 75px;
+    margin-bottom: 96px;
+  }
+
+  .resultMeans_thumb {
+    width: 435px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .resultMeans_container {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 331px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .resultMeans {
+    margin-top: 65px;
+    margin-left: 140px;
+    margin-right: 140px;
+    gap: 131px;
+    position: relative;
+    align-items: flex-end;
+  }
+
+  .resultMeans_thumb {
+    width: 564px;
+  }
+
+  .resultMeans_container {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+    width: 465px;
+  }
+
+  .resultMeans_header {
+    font-size: 48px;
+    font-family: $mainFont;
+    font-weight: 600;
+    line-height: 110%;
+
+    margin-bottom: 35px;
+  }
+
+  .result_line {
+    display: block;
+    position: absolute;
+    right: 27px;
+    top: -52px;
+  }
 }

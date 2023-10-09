@@ -33,3 +33,50 @@
 
   margin: 0;
 }
+
+@media (min-width: 768px) {
+  .guidance {
+    margin-bottom: 96px;
+
+    padding-left: 39px;
+    padding-right: 43px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .guidance_box {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .guidance_image {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .guidance {
+    display: flex;
+    gap: 32px;
+
+    margin-bottom: 120px;
+    margin-left: 24px;
+    margin-right: 24px;
+    border-radius: 35px;
+
+    padding-left: 116px;
+    padding-right: 117px;
+    padding-top: 72px;
+    padding-bottom: 96px;
+  }
+
+  .guidance_box {
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+
+    flex-basis: calc((100% - 64px) / 3);
+  }
+}
